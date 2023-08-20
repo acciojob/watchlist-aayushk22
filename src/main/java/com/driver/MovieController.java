@@ -55,11 +55,11 @@ public class MovieController {
         return ResponseEntity.ok(result);
     }
 
-    @GetMapping("/get-all-directors")
-    public ResponseEntity<List<String>>findAllDirectors() {
-        List<String> result = movieService.findAllDirectors();
-        return ResponseEntity.ok(result);
-    }
+//    @GetMapping("/get-all-directors")
+//    public ResponseEntity<List<String>>findAllDirectors() {
+//        List<String> result = movieService.findAllDirectors();
+//        return ResponseEntity.ok(result);
+//    }
 
     @DeleteMapping("/delete-director-by-name")
     public ResponseEntity<String> deleteDirectorByName(@RequestParam("dn") String directorName){
@@ -68,8 +68,8 @@ public class MovieController {
     }
 
     @DeleteMapping("/delete-all-directors")
-    public ResponseEntity<String> deleteAllDirectors(@RequestParam("dn") String directorName) {
-        String response = movieService.deleteAllDirectors(directorName);
+    public ResponseEntity<String> deleteAllDirectors() {
+        String response = movieService.deleteAllDirectors();
         return ResponseEntity.ok(response);
     }
 

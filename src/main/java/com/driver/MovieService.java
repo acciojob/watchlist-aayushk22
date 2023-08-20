@@ -52,13 +52,13 @@ public class MovieService {
         return "Director and his movies deleted successfully";
     }
 
-    public String deleteAllDirectors(String directorName) {
-        movieRepository.deleteAllDirectors(directorName);
+    public String deleteAllDirectors() {
+        movieRepository.deleteAllDirectors();
         return "All directors deleted successfully";
     }
 
-    public List<String> findAllDirectors() {
-        List<String> res = movieRepository.findAllDirectors();
-        return res;
-    }
+//    public List<String> findAllDirectors() {
+//        List<String> res = movieRepository.findAllDirectors();
+//        return res;
+//    }
 }

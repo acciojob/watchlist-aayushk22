@@ -92,7 +92,7 @@ public class MovieRepository {
         movieDirectorHashMap.remove(directorName);
     }
 
-    public void deleteAllDirectors(String directorName) {
+    public void deleteAllDirectors() {
         directorHashMap.clear();
 
         for (Map.Entry<String,List<Movie>> entry: movieDirectorHashMap.entrySet()) {
@@ -106,13 +106,13 @@ public class MovieRepository {
         movieDirectorHashMap.clear();
     }
 
-    public List<String> findAllDirectors() {
-        List<String> res = new ArrayList<>();
-
-        for (Map.Entry<String,Director> entry: directorHashMap.entrySet()) {
-            res.add(entry.getKey());
-        }
-
-        return res;
-    }
+//    public List<String> findAllDirectors() {
+//        List<String> res = new ArrayList<>();
+//
+//        for (Map.Entry<String,Director> entry: directorHashMap.entrySet()) {
+//            res.add(entry.getKey());
+//        }
+//
+//        return res;
+//    }
 }
